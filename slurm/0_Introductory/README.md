@@ -13,7 +13,7 @@ Replace the following placeholders in the script with details specific to your r
 - `[partition]`: debug, general-compute, industry, scavenger, ub-laser
 - `[qos]`: `[partition]`
 - `[SlurmAccountName]`: Tell Slurm which account to run this job under. If not specified, your default account will be used. Use the `slimits` command to see what accounts you have access to
-- `[MailType]`: all, begin, end, requeue, time_limit
+- `[MailType]`: NONE, BEGIN, END, FAIL, ALL
 
 ## How to launch an interactive job on the faculty cluster  
 
