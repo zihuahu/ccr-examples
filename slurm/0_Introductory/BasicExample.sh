@@ -6,7 +6,7 @@
 ##Select the appropriate partition from the placeholders							
 #SBATCH --partition=[partition]
 
-##qos is generally same as [partition]
+##qos is usually the same as [partition] - refer to [CCR docs](https://docs.ccr.buffalo.edu/en/latest/hpc/jobs/#slurm-directives-partitions-qos)
 #SBATCH --qos=[qos]
 
 ##Job runtime limit. Exceeding this cancels the job. Format: dd:hh:mm:ss
