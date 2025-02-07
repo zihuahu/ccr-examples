@@ -10,7 +10,7 @@ Replace the following placeholders in the script with details specific to your r
 
 - `[cluster]`: ub-hpc, faculty
 - `[partition]`: debug, general-compute, industry, scavenger, ub-laser
-- `[qos]`: `[partition]`
+- `[qos]`: usually the same as `[partition]` - refer to [CCR docs](https://docs.ccr.buffalo.edu/en/latest/hpc/jobs/#slurm-directives-partitions-qos)
 
 ## How to launch an interactive job on the faculty cluster  
 
