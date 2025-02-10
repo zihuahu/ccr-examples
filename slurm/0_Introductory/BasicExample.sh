@@ -1,6 +1,6 @@
 #!/bin/bash -l
 
-##Select the appropriate cluster from the README.md placeholders
+##Select an appropriate value for [cluster] from those listed in slurm/0_Introductory/README.md
 #SBATCH --cluster=[cluster]
 
 ##Select the appropriate partition from the placeholders							
