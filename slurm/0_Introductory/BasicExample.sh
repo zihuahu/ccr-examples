@@ -1,19 +1,21 @@
 #!/bin/bash -l
 
-##Select an appropriate value for [cluster] from those listed in slurm/0_Introductory/README.md
+##   This file is intended to serve as a template to be downloaded and modified for your use case.
+##   For more information, refer to the following resources whenever referenced in the script-
+##   README- https://github.com/ubccr/ccr-examples/tree/main/slurm/0_Introductory/README.md
+##   DOCUMENTATION- https://docs.ccr.buffalo.edu/en/latest/hpc/jobs
+
+##   Select a cluster, partition and qos that is appropriate for your use case
+##   Available options and more details are provided in README
 #SBATCH --cluster=[cluster]
-
-##Select the appropriate partition from the placeholders							
 #SBATCH --partition=[partition]
-
-##qos is usually the same as [partition] - refer to [CCR docs](https://docs.ccr.buffalo.edu/en/latest/hpc/jobs/#slurm-directives-partitions-qos)
 #SBATCH --qos=[qos]
 
-##Job runtime limit. Exceeding this cancels the job. Format: dd:hh:mm:ss
+##   Job runtime limit, the job will be canceled once this limit is reached. Format- dd:hh:mm
 #SBATCH --time=00:01:00
 
-##Number of "tasks" (for parallelism). Refer our documentation provided in the README.md for more info on this.
+##   Number of "tasks" (for parallelism). Refer to DOCUMENTATION for more details
 #SBATCH --ntasks=1
 
-##Specify real memory required per node. Default units are megabytes.
+##   Specify real memory required per node. Default units are megabytes
 #SBATCH --mem=20G

@@ -1,10 +1,13 @@
 # Basic Slurm Job
 
-## Using this example
+## Using these examples
 
-This example can be used to submit a basic job in an HPC environment. It highlights key features such as cluster, partition, memory requirements, and more.
+The example Slurm script `(BasicExample.sh)` can be used to submit a basic job in an HPC environment. It highlights key features such as cluster, partition, memory requirements, and more.
 
-Portions of this example batch script which must be changed for the script to function are referred to as placeholders and denoted by square brackets. Replace the following placeholders in your script with details specific to your use case before submitting your job.
+The example Slurm script `(debug.sh)` can be used to submit a job to the debug partition. (WIP)
+
+Portions of the example batch scripts which must be changed for the script to function are referred to as placeholders and denoted by square brackets. Replace the following placeholders in your 
+script with details specific to your use case before submitting your job.
 
 ## Placeholders:
 
