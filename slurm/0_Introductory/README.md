@@ -10,8 +10,7 @@ For additional SLURM directives, refer to [`(slurm-options.sh)`](https://github.
 
 ## Placeholders:
 
-Portions of the example batch scripts which must be changed for the script to function are referred to as placeholders and denoted by square brackets. Replace the following placeholders in your
-script with details specific to your use case before submitting your job.
+Portions of the example batch scripts which must be changed for the script to function are referred to as placeholders and denoted by square brackets. Replace the following placeholders in your script with details specific to your use case before submitting your job.
 
 - `[cluster]`: ub-hpc, faculty
 - `[partition]`: general-compute, debug, industry, scavenger, ub-laser, [other available options](https://docs.ccr.buffalo.edu/en/latest/hpc/clusters/#ub-hpc-compute-cluster)
