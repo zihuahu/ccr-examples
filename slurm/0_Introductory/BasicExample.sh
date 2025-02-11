@@ -5,11 +5,12 @@
 ##   README- https://github.com/ubccr/ccr-examples/tree/main/slurm/0_Introductory/README.md
 ##   DOCUMENTATION- https://docs.ccr.buffalo.edu/en/latest/hpc/jobs
 
-##   Select a cluster, partition and qos that is appropriate for your use case
+##   Select a cluster, partition, qos and account that is appropriate for your use case
 ##   Available options and more details are provided in README
 #SBATCH --cluster=[cluster]
 #SBATCH --partition=[partition]
 #SBATCH --qos=[qos]
+#SBATCH --account=[SlurmAccountName]
 
 ##   Job runtime limit, the job will be canceled once this limit is reached. Format- dd:hh:mm
 #SBATCH --time=00:01:00
@@ -19,3 +20,7 @@
 
 ##   Specify real memory required per node. Default units are megabytes
 #SBATCH --mem=20G
+
+##   Let's start some work
+echo "Hello world: "`/usr/bin/uname -n`
+##   Let's finish some work
