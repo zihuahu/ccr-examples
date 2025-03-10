@@ -1,23 +1,47 @@
 #!/bin/bash -l
 
-#SBATCH --partition=general-compute
-#SBATCH --qos=general-compute
-#SBATCH --clusters=ub-hpc
-#SBATCH --time=01:00:00
-#SBATCH --nodes=2
-#SBATCH --ntasks-per-node=1
-#SBATCH --cpus-per-task=4
+##   This file is intended to serve as a template to be downloaded and modified for your use case.
+##   For more information, refer to the following resources whenever referenced in the script-
+##   README- https://github.com/ubccr/ccr-examples/tree/main/slurm/2_Applications/README.md
+##   DOCUMENTATION- https://docs.ccr.buffalo.edu/en/latest/hpc/jobs
+##   SLURM DIRECTIVES- https://docs.ccr.buffalo.edu/en/latest/hpc/jobs/#slurm-directives-partitions-qos
+
+##   Select a cluster, partition, qos and account that is appropriate for your use case
+##   Available options and more details are provided in README
+#SBATCH --cluster=[cluster]
+#SBATCH --partition=[partition]
+#SBATCH --qos=[qos]
+#SBATCH --account=[SlurmAccountName]
+
+##   Job runtime limit. Format- dd:hh:mm
+#SBATCH --time=00:01:00
+
+##   Refer to DOCUMENTATION for details on the next three directives
+
+##   Number of nodes
+#SBATCH --nodes=1
+
+##   Specify the number of tasks (for parallelism)
+#SBATCH --ntasks=1
+
+##   Allocate CPUs per task
+#SBATCH --cpus-per-task=1
+
+##   Specify real memory required per node. Default units are megabytes
 #SBATCH --mem=12G
+
+##   Number of gpus per node. Refer to snodes output for breakdown of node capabilities.
+##   For additional GPU request options refer to SLURM DIRECTIVES 
 #SBATCH --gpus-per-node=2
 
 module load foss pytorch transformers
 
 echo "START TIME: $(date)"
 
-# Set this to some place in your projects space. Defaults to scratch
+##   Set this to some place in your projects space. Defaults to scratch
 hf_cache_dir=$SLURMTMPDIR
 
-# Define huggingface cache directories to avoid going over quota in $HOME
+##   Define huggingface cache directories to avoid going over quota in $HOME
 export TRANSFORMERS_CACHE=$hf_cache_dir/models
 export HF_DATASETS_CACHE=$hf_cache_dir/datasets
 export HF_MODULES_CACHE=$hf_cache_dir/modules

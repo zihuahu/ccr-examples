@@ -1,7 +1,8 @@
 # Example PETSc custom easybuild
 
-This is an example of building PETSc with easybuild using a slurm job.
+This is an example of building PETSc with easybuild using a slurm job. (CCR Staff: Need more info here.)
 
-## How to use
+## Placeholders:
 
-TODO: write me
+Portions of this example batch script contain placeholders, denoted by square brackets. Refer to the 2_ApplicationSpecific 
+[README](https://github.com/ccr-examples-Monish/tree/main/slurm/2_ApplicationSpecific/README.md) for details and options.

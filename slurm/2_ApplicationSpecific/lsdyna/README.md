@@ -1,7 +1,19 @@
 # Example lsdyna job
 
-This is an example lsdyna slurm job.
+Provided are two example lsdyna slurm jobs: [lsdyna.sh](https://github.com/ccr-examples-Monish/tree/main/slurm/2_ApplicationSpecific/lsdyna/lsdyna.sh) a script for non-parallel processing, and 
+[lsdyna_mpp.sh](https://github.com/ccr-examples-Monish/tree/main/slurm/2_ApplicationSpecific/lsdyna/lsdyna_mpp.sh) a script for massively parallel processing.
 
-## How to use
+LS-DYNA is now part of the Ansys software bundle. To load the module, use `module load ansys/2023R1` The lsdyna executables do not show up in the path any longer. To use them properly, you'll 
+need to use these commands:
 
-TODO: write me
+- Single Precision: `$EBROOTANSYS/v231/ansys/bin/linx64/lsdyna_sp.e ncpus=$SLURM_NPROCS i=ball_and_plate.k` (CCR Staff: I've added commands from the scripts. Need to be confirmed)
+- Single precision, massively parallel: `$EBROOTANSYS/v231/ansys/bin/linx64/lsdyna_sp_mpp.e i=ball_and_plate.k`
+- Double Precision: `$EBROOTANSYS/v231/ansys/bin/linx64/lsdyna_dp.e ncpus=$SLURM_NPROCS i=ball_and_plate.k`
+- Double precision, massively parallel: `mpiexec $EBROOTANSYS/v231/ansys/bin/linx64/lsdyna_dp_mpp.e i=ball_and_plate.k`
+
+Please refer to the Ansys LS-DYNA [manuals](https://lsdyna.ansys.com/manuals/) for further information and options.
+
+## Placeholders:
+
+Portions of this example batch script contain placeholders, denoted by square brackets. Refer to the 2_ApplicationSpecific 
+[README](https://github.com/ccr-examples-Monish/tree/main/slurm/2_ApplicationSpecific/README.md) for details and options.

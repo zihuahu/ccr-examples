@@ -29,3 +29,8 @@ $ sbatch niftypet-demo-slurm.sh
 Copy the demo.nbconvert.ipynb file to your local machine and view it here:
 
 https://jsvine.github.io/nbpreview/
+
+## Placeholders:
+
+Portions of this example batch script contain placeholders, denoted by square brackets. Refer to the 2_ApplicationSpecific 
+[README](https://github.com/ccr-examples-Monish/tree/main/slurm/2_ApplicationSpecific/README.md) for details and options.

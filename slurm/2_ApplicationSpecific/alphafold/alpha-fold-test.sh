@@ -28,7 +28,7 @@
 #SBATCH --mem=64000
 
 ##   Number of GPUs required. Specify the GPU node with the constraint option (A100, V100). 
-##   See GPU DOCUMENTATION for more info (Need to be confirmed)
+##   See GPU DOCUMENTATION for more info (CCR Staff: Info needs to be confirmed)
 #SBATCH --gpus-per-node=2
 #SBATCH --constraint=A100
 
