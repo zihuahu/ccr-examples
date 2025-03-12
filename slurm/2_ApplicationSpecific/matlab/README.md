@@ -17,7 +17,6 @@ invoking MATLAB with `-singleCompThread` `-nodisplay` `-nosplash`, the GUI is su
 To run the MATLAB script, simply submit the job to the scheduler from a login node with the following command:
 ```
 $ sbatch matlab-sp.sh
-Submitted batch job 15390684
 ```
 - NOTE: When you're done, make sure to quit MATLAB and then type `exit` to log out of the compute node and properly release the resources for other users.
 
