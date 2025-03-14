@@ -5,9 +5,9 @@ This directory includes examples of serial, multithreaded, and GPU  MATLAB jobs.
 ## Placeholders:
 
 Portions of the example batch scripts contain placeholders, denoted by square brackets. Refer to the 2_ApplicationSpecific 
-[README](https://github.com/ccr-examples-Monish/tree/main/slurm/2_ApplicationSpecific/README.md) for details and options.
+[README](../README.md) for details and options.
 
-## Serial MATLAB job ([serial/](https://github.com/ccr-examples/tree/main/slurm/2_ApplicationSpecific/matlab/serial))
+## Serial MATLAB job ([serial/](./serial))
 
 A serial MATLAB job is one that requires only a single CPU-core.
 
@@ -20,7 +20,7 @@ $ sbatch matlab-sp.sh
 ```
 - NOTE: When you're done, make sure to quit MATLAB and then type `exit` to log out of the compute node and properly release the resources for other users.
 
-## Multi-threaded MATLAB Job ([multithreaded/](https://github.com/ccr-examples/tree/main/slurm/2_ApplicationSpecific/matlab/multithreaded))
+## Multi-threaded MATLAB Job ([multithreaded/](./multithreaded))
 
 If your code utilizes the Parallel Computing Toolbox (e.g., `parfor`) or you have intense computations that can benefit from the built-in multi-threading provided by MATLAB's BLAS implementation, 
 you can run in multi-threaded mode. You can use up to all the CPU-cores on a single node in this mode.
@@ -38,7 +38,7 @@ By default MATLAB will restrict you to 12 worker threads. You can override this 
 poolobj = parpool('local', 24);
 ```
 
-## MATLAB on GPUs ([GPU/](https://github.com/ccr-examples/tree/main/slurm/2_ApplicationSpecific/matlab/GPU))
+## MATLAB on GPUs ([GPU/](./GPU))
 
 MATLAB has support for running on GPUs. Provided is a MATLAB script (`svd_matlab.m`) that performs a matrix decomposition using a GPU with the corresponding slurm script (`matlab-gpu.sh`).
 

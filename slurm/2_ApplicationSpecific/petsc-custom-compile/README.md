@@ -5,4 +5,4 @@ This is an example of building PETSc with easybuild using a slurm job. (CCR Staf
 ## Placeholders:
 
 Portions of this example batch script contain placeholders, denoted by square brackets. Refer to the 2_ApplicationSpecific 
-[README](https://github.com/ccr-examples-Monish/tree/main/slurm/2_ApplicationSpecific/README.md) for details and options.
+[README](../README.md) for details and options.
