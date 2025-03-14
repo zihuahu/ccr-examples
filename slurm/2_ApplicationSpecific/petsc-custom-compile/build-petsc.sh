@@ -4,7 +4,7 @@
 ##   For more information, refer to the following resources whenever referenced in the script-
 ##   README- https://github.com/ubccr/ccr-examples/tree/main/slurm/2_ApplicationSpecific/README.md
 ##   DOCUMENTATION- https://docs.ccr.buffalo.edu/en/latest/hpc/jobs
-##   GPU DOCUMENTATION- https://docs.ccr.buffalo.edu/en/latest/software/modules/#alphafold (Needs to be updated)
+##   GPU DOCUMENTATION- https://docs.ccr.buffalo.edu/en/latest/hpc/jobs/#slurm-directives-partitions-qos (CCR Staff: Needs to be updated)
 
 ##   Select a cluster, partition, qos and account that is appropriate for your use case
 ##   Available options and more details are provided in README
