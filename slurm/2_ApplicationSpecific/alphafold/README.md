@@ -1,6 +1,6 @@
 # Example AlphaFold job
 
-Provided is an example AlphaFold slurm job. [T11050.fasta](https://github.com/ccr-examples-Monish/tree/main/slurm/2_ApplicationSpecific/alphafold/T1050.fasta) is a protein sequence provided 
+Provided is an example AlphaFold slurm job. [T11050.fasta](./T1050.fasta) is a protein sequence provided 
 for...(need info here).
 
 A couple notes on running AlphaFold:
@@ -17,4 +17,4 @@ run_alphafold.py. They will have the same CLI arguments.
 ## Placeholders:
 
 Portions of this example batch script contain placeholders, denoted by square brackets. Refer to the 2_ApplicationSpecific 
-[README](https://github.com/ccr-examples-Monish/tree/main/slurm/2_ApplicationSpecific/README.md) for details and options.
+[README](/README.md) for details and options.
