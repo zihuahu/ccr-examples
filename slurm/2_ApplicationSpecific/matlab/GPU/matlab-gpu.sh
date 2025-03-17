@@ -23,9 +23,6 @@
 ##   Specify the number of tasks (for parallelism)
 #SBATCH --ntasks=1
 
-##   Number of tasks per node (use with distributed parallelism
-#SBATCH --ntasks-per-node=1
-
 ##   Allocate CPUs per task
 #SBATCH --cpus-per-task=1
 
@@ -35,25 +32,10 @@
 ##   Number of gpus per node. Refer to snodes output for breakdown of node capabilities
 #SBATCH --gpus-per-node=1
 
-module load foss niftypet ipython
+##   Send email on job start, end, fault and Valid email for Slurm to send notifications - "mail-user"
+#SBATCH --mail-type=all
+#SBATCH --mail-user=UBITusername@buffalo.edu
 
-##   Optionally remove ~/.niftypet. This just ensures NiftyPET re-generates
-##   resources.py.
-rm -rf $HOME/.niftypet/
+module load matlab/2023b
 
-export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
-
-##   NOTE: if you require the proprietary hardware mu-maps and have to be obtained
-##   them from Siemens Biograph mMR scanner, you can set this env variable:
-##   export HMUDIR=/path/to/mmr_hardware_mumaps
-
-##   Execute NiftyPET demo notebook from the command line.
-##   See here: https://niftypet.readthedocs.io/en/latest/tutorials/demo/
-
-##   NOTE: The demo.ipynb has been modified slightly to not use the hardware
-##   mu-maps per:
-##   https://github.com/NiftyPET/NiftyPET/issues/4#issuecomment-12020906693
-
-##   This will execute demo.ipynb and save the results to a new notebook 
-##   named: demo.nbconvert.ipynb
-srun jupyter nbconvert --execute --to notebook demo.ipynb
+matlab -singleCompThread -nodisplay -nosplash -r svd_matlab
