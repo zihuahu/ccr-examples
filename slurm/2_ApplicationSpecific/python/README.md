@@ -7,7 +7,7 @@ This directory includes examples of serial, multithreaded, and GPU  Python jobs.
 Portions of the example batch scripts contain placeholders, denoted by square brackets. Refer to the 2_ApplicationSpecific 
 [README](../README.md) for details and options.
 
-## Serial MATLAB job ([serial/](./serial))
+## Serial Python job ([serial/](./serial))
 
 A serial Python job is one that requires only a single CPU-core.
 
