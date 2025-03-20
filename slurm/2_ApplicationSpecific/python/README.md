@@ -17,4 +17,4 @@ To run the Python script, simply submit the job to the scheduler from a login no
 ```
 $ sbatch python-sp.sh
 ```
-- NOTE: When you're done, make sure to quit Python and then type `exit` to log out of the compute node and properly release the resources for other users.
+
