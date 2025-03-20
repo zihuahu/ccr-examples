@@ -1,6 +1,6 @@
-# MATLAB on the CCR Clusters
+# Python on the CCR Clusters
 
-This directory includes examples of serial, multithreaded, and GPU  MATLAB jobs. (CCR Staff: Need more info here)
+This directory includes examples of serial, multithreaded, and GPU  Python jobs. (CCR Staff: Need more info here)
 
 ## Placeholders:
 
@@ -9,18 +9,17 @@ Portions of the example batch scripts contain placeholders, denoted by square br
 
 ## Serial MATLAB job ([serial/](./serial))
 
-A serial MATLAB job is one that requires only a single CPU-core.
+A serial Python job is one that requires only a single CPU-core.
 
-Provided is an example of a trivial, one-line serial MATLAB program (`hello_world.m`) with the corresponding Slurm script (`matlab-sp.sh`) that can be modified to run a serial MATLAB job. By 
-invoking MATLAB with `-singleCompThread` `-nodisplay` `-nosplash`, the GUI is suppressed as is the creation of multiple threads.
+Provided is an example of a trivial, one-line serial Python program (`fibonacci.py`) with the corresponding Slurm script (`python-sp.sh`) that can be modified to run a serial Python job.
 
-To run the MATLAB script, simply submit the job to the scheduler from a login node with the following command:
+To run the Python script, simply submit the job to the scheduler from a login node with the following command:
 ```
-$ sbatch matlab-sp.sh
+$ sbatch python-sp.sh
 ```
-- NOTE: When you're done, make sure to quit MATLAB and then type `exit` to log out of the compute node and properly release the resources for other users.
+- NOTE: When you're done, make sure to quit Python and then type `exit` to log out of the compute node and properly release the resources for other users.
 
-## Multi-threaded MATLAB Job ([multithreaded/](./multithreaded))
+## Multi-threaded Python Job ([multithreaded/](./multithreaded))
 
 If your code utilizes the Parallel Computing Toolbox (e.g., `parfor`) or you have intense computations that can benefit from the built-in multi-threading provided by MATLAB's BLAS implementation, 
 you can run in multi-threaded mode. You can use up to all the CPU-cores on a single node in this mode.
