@@ -34,5 +34,4 @@
 #SBATCH --mail-user=UBITusername@buffalo.edu
 
 module load gcccore/11.2.0 python/3.9.6
-
 python fibonacci.py
