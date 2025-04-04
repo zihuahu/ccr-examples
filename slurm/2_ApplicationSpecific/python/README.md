@@ -4,7 +4,7 @@ This directory includes examples of serial, multithreaded, and GPU  Python jobs.
 
 ## Placeholders:
 
-Portions of this example batch script contain placeholders, denoted by square brackets. Refer to the 2_ApplicationSpecific [README](../README.md) for details and options.
+Portions of the example batch script contain placeholders, denoted by square brackets. Refer to the 2_ApplicationSpecific [README](../README.md) for details and options.
 
 ## Serial Python job ([serial/](./serial))
 
