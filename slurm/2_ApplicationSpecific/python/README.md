@@ -1,6 +1,6 @@
 # Python on the CCR Clusters
 
-This directory includes examples of serial, multithreaded, and GPU  Python jobs. (CCR Staff: Need more info here)
+This directory includes examples of a serial Python job, with mutlithreaded and GPU examples coming soon.
 
 ## Placeholders:
 
