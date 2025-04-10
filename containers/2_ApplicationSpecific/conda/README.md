@@ -44,7 +44,7 @@ INFO:    Creating SIF file...
 INFO:    Build complete: conda.sif
 ```
 
-4. Run your container  
+## Running the container  
 
 For our example, we added `busco` to the end of our `environment.yml` file to demonstrate installing a package in the conda environment.  Now let's test it.  You can run the `busco` software simply by specifying the container and the `busco` package name as shown here:  
 
