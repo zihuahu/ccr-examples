@@ -1,10 +1,10 @@
 # Example conda container  
 
-CCR does not support running Anaconda on its HPC systems natively for [these reasons](https://docs.ccr.buffalo.edu/en/latest/software/modules/#anaconda-python).  We realize many applications are available only via conda so, as an alternative, users can utilize conda in an Apptainer container.  Utilizing a container for conda eliminates many of the problems it creates on our systems.  This is not a perfect solution though and does require some technical expertise on the part of you, the CCR user.  We provide this information as an example only.  You can modify this to meet your needs.  However, we do not provide support for Anaconda applications.  Any issues you may encounter will need to be worked out on your own.  
+CCR does not support running Anaconda on its HPC systems natively for [these reasons](https://docs.ccr.buffalo.edu/en/latest/software/modules/#anaconda-python).  We realize many applications are only available via conda so, as an alternative, users can utilize conda in an Apptainer container.  Utilizing a container for conda eliminates many of the problems it creates on our systems.  This is not a perfect solution though and does require some technical expertise on your part as the CCR user.  We provide this information as an example for installing and creating a conda environment. You can modify these files to install the conda packages you require.  Any issues you may encounter will need to be worked out on your own.  
 
 ## Building the container  
 
-Please refer to CCR's [container documentation](https://docs.ccr.buffalo.edu/en/latest/howto/containerization/) for information on building and using Apptainer.  This example provides an Apptainer definition file (`conda.def`) which provides Apptainer a list of packages to install in an Ubuntu container environment.  It also provides an environment file (`environment.yml`) that's used to install packages after the container is built.  For most use cases, you will only need to modify the `environment.yml` file where you'll add additional Python and conda packages to install in your environment. This example utilizes the [conda-forge environment](https://conda-forge.org/) to align with the most recent appropriate use license guidance from Anaconda. 
+Please refer to CCR's [container documentation](https://docs.ccr.buffalo.edu/en/latest/howto/containerization/) for information on building and using Apptainer.  This example provides an Apptainer definition file (`conda.def`) which lists a number of packages and installation steps so Apptainer can install these in an Ubuntu container environment.  This example also uses an environment file (`environment.yml`) to specify which conda packages to install during the build.  For most use cases, you will only need to modify the `environment.yml` file where you'll add additional Python and conda packages to install in your environment. This example utilizes the [conda-forge environment](https://conda-forge.org/) to align with the most recent appropriate use license guidance from Anaconda. 
 
 1. Start an interactive job
 
@@ -44,26 +44,20 @@ INFO:    Creating SIF file...
 INFO:    Build complete: conda.sif
 ```
 
+NOTE: Whenever you modify the `environment.yml` file to add more Python packages to install via conda or pip, you will need to rebuild your container.  
+
 ## Running the container  
 
-For our example, we added `busco` to the end of our `environment.yml` file to demonstrate installing a package in the conda environment.  Now let's test it.  You can run the `busco` software simply by specifying the container and the `busco` package name as shown here:  
+For our example, we have no additional conda packages installed.  However, we can test this container by running Python: 
 
 ```
-CCRusername@cpn-h23-04:~$ apptainer run conda.sif busco
-
-usage: busco -i [SEQUENCE_FILE] -l [LINEAGE] -o [OUTPUT_NAME] -m [MODE] [OTHER OPTIONS]
-
+CCRusername@cpn-h23-04:~$ apptainer exec conda.sif python
+Python 3.10.16 | packaged by conda-forge | (main, Apr  8 2025, 20:53:32) [GCC 13.3.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>>
 ```
 
-Alternatively, you can run the `busco` application by first getting shell access to the container, as shown here:  
-
-```
-CCRusername@cpn-h23-04:~$ apptainer shell conda.sif  
-Apptainer> busco
-usage: busco -i [SEQUENCE_FILE] -l [LINEAGE] -o [OUTPUT_NAME] -m [MODE] [OTHER OPTIONS]
-```
-
-You can access Python in this container the same way:  
+Alternatively, you can first get shell access into the container and then run Python, as shown here:   
 
 ```
 CCRusername@cpn-h23-04:~$ apptainer shell conda.sif  
