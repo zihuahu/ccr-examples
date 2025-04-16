@@ -30,10 +30,10 @@ For additional Slurm directives, refer to [slurm-options.sh](./slurm-options.sh)
 
 This directory includes Slurm scripts for more complex use cases such as job arrays, parallel computing, and using the scavenger partition.
 
-## - Application Specific Scripts ([2_ApplicationSpecific/](./ApplicationSpecific/README.md))
+## - Application Specific Scripts ([2_ApplicationSpecific/](./2_ApplicationSpecific/README.md))
 
 This directory contains Slurm job scripts tailored for specific applications that have specific setup requirements like Alphafold, MATLAB, Python, etc. Note that not every piece of software installed on CCR's systems has an example script in this directory.
 
-A [table](./ApplicationSpecific/README.md#table-of-topics) of available scripts for  applications is provided for easier navigation and reference.
+A [table](./2_ApplicationSpecific/README.md#table-of-topics) of available scripts for  applications is provided for easier navigation and reference.
 
 
