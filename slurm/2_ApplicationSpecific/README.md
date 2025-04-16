@@ -10,7 +10,7 @@ For additional SLURM directives, refer to [slurm-options.sh](../slurm-options.sh
 
 | Topic                                | Description |
 |--------------------------------------|------------------------|
-| [AlphaFold](./2_ApplicationSpecific/alphafold)                | AlphaFold example |
-| [LSDYNA](./2_ApplicationSpecific/lsdyna)                      | LSDYNA example |
-| [MATLAB](./2_ApplicationSpecific/matlab)                      | The MATLAB directory includes example scripts for running [serial](./2_ApplicationSpecific/matlab/serial), [multithreaded](./2_ApplicationSpecific/matlab/multithreaded), and [GPU](./2_ApplicationSpecific/matlab/GPU) MATLAB jobs |
-| [Python](./2_ApplicationSpecific/python)                      | A directory containing examples of [serial](./2_ApplicationSpecific/python/serial) Python job, with multithreaded and GPU examples coming soon |
+| [AlphaFold](./alphafold)                | AlphaFold example |
+| [LSDYNA](./lsdyna)                      | LSDYNA example |
+| [MATLAB](./matlab)                      | The MATLAB directory includes example scripts for running [serial](./matlab/serial), [multithreaded](./matlab/multithreaded), and [GPU](./matlab/GPU) MATLAB jobs |
+| [Python](./python)                      | A directory containing examples of [serial](./python/serial) Python job, with multithreaded and GPU examples coming soon |
