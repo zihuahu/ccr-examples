@@ -1,7 +1,6 @@
 # Example AlphaFold job
 
-Provided is an example AlphaFold slurm job. [T11050.fasta](./T1050.fasta) is a protein sequence provided 
-for...(need info here).
+Provided is an example AlphaFold slurm job and [T11050.fasta](./T1050.fasta) is a protein sequence.
 
 A couple notes on running AlphaFold:
 
@@ -13,11 +12,3 @@ echo $ALPHAFOLD_DATA_DIR
 ```
 - Many of the examples you'll find online run AlphaFold in docker. You do not want to do this. Instead just substitute python3 docker/run_docker.py with the script provided by the alphfold module 
 run_alphafold.py. They will have the same CLI arguments.
-
-## Additional Information
-
-For more details on placeholder values, Slurm usage and common directives, refer to the following resources:
-
-- [Slurm README](../../README.md)
-- [Placeholder Guide](../../README.md#placeholders)
-- [slurm-options.sh](../../slurm-options.sh)

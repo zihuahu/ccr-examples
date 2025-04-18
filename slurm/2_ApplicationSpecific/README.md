@@ -15,8 +15,6 @@ This directory contains batch scripts for a variety of applications that have sp
 
 ## Additional Information
 
-For more details on placeholder values, Slurm usage and common directives, refer to the following resources:
-
-- [Slurm README](../README.md)
-- [Placeholder Guide](../README.md#placeholders)
-- [slurm-options.sh](../slurm-options.sh)
+- The [Slurm README](../README.md) provides details on general Slurm usage.                                
+- The [Placeholders](../README.md#placeholders) section lists the available options for each placeholder used in the example scripts.
+- The [slurm-options.sh](../slurm-options.sh) file outlines commonly used `#SBATCH` directives with their descriptions.

@@ -12,11 +12,3 @@ To run the Python script, simply submit the job to the scheduler from a login no
 ```
 $ sbatch python-sp.sh
 ```
-
-## Additional Information
-
-For more details on placeholder values, Slurm usage and common directives, refer to the following resources:
-
-- [Slurm README](../../README.md)
-- [Placeholder Guide](../../README.md#placeholders)
-- [slurm-options.sh](../../slurm-options.sh)

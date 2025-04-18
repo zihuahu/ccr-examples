@@ -2,14 +2,6 @@
 
 This directory includes examples of serial, multithreaded, and GPU  MATLAB jobs.
 
-## Helpful Information
-
-For more details on placeholder values, Slurm usage and common directives, refer to the following resources:
-
-- [Slurm README](../../README.md)
-- [Placeholder Guide](../../README.md#placeholders)
-- [slurm-options.sh](../../slurm-options.sh)
-
 ## Serial MATLAB job ([serial/](./serial))
 
 A serial MATLAB job is one that requires only a single CPU-core.
