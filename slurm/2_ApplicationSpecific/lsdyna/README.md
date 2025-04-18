@@ -15,13 +15,7 @@ The lsdyna executables do not show up in the path any longer. To use them proper
 
 ## Example Scripts:  
 
-Provided in this repo are two example lsdyna slurm jobs: [lsdyna.sh](./lsdyna_single_node_smp.sh) a script for running shared memory parallel (SMP) LS-DYNA, [lsdyna_single_node_mpp.sh](./lsdyna_single_node_smp.sh) and [lsdyna_multi_node_mpp.sh](./lsdyna_multi_node_mpp.sh) scripts with examples for message passing parallel (MPP) LS-DYNA.  We provide examples of single and double precision for both options.  Please uncomment the line with the command you want to use and add a `#` to the beginning of the line with the command you don't want to use.  SMP should be run on a single node.  MPP can run on multiple cores of a single node or potentially across multiple nodes.  You can find an example input file `ball_and_plate.k` for testing purposes on CCR's systems in `/util/software/examples/lsdyna`.  These scripts may need to be modified to properly work for your problem.  Please refer to the Ansys LS-DYNA [manuals](https://lsdyna.ansys.com/manuals/) for further information and options.  
-
-## Placeholders:
-
-Portions of this example batch script contain placeholders, denoted by square brackets. Refer to the 2_ApplicationSpecific 
-[README](../README.md) for details and options.
-
+Provided in this repo are two example lsdyna slurm jobs: [lsdyna.sh](./lsdyna_single_node_smp.sh) a script for running shared memory parallel (SMP) LS-DYNA, [lsdyna_single_node_mpp.sh](./lsdyna_single_node_smp.sh) and [lsdyna_multi_node_mpp.sh](./lsdyna_multi_node_mpp.sh) scripts with examples for message passing parallel (MPP) LS-DYNA.  We provide examples of single and double precision for both options.  Please uncomment the line with the command you want to use and add a `#` to the beginning of the line with the command you don't want to use.  SMP should be run on a single node.  MPP can run on multiple cores of a single node or potentially across multiple nodes.  You can find an example input file `ball_and_plate.k` for testing purposes on CCR's systems in `/util/software/examples/lsdyna`.  These scripts may need to be modified to properly work for your problem.  Please refer to the Ansys LS-DYNA [manuals](https://lsdyna.ansys.com/manuals/) for further information and options.
 
 ## Memory Specification:  
 
@@ -42,3 +36,11 @@ MEMORY=600      #600 words = 600 words * 8 B = 4800 KB
 ```
 
 Thanks to [Texas A&M](https://hprc.tamu.edu/kb/Software/LST/ls-dyna/) for their excellent documentation.
+
+## Additional Information
+
+For more details on placeholder values, Slurm usage and common directives, refer to the following resources:
+
+- [Slurm README](../../README.md)
+- [Placeholder Guide](../../README.md#placeholders)
+- [slurm-options.sh](../../slurm-options.sh)

@@ -1,11 +1,14 @@
 # MATLAB on the CCR Clusters
 
-This directory includes examples of serial, multithreaded, and GPU  MATLAB jobs. (CCR Staff: Need more info here)
+This directory includes examples of serial, multithreaded, and GPU  MATLAB jobs.
 
-## Placeholders:
+## Helpful Information
 
-Portions of the example batch scripts contain placeholders, denoted by square brackets. Refer to the 2_ApplicationSpecific 
-[README](../README.md) for details and options.
+For more details on placeholder values, Slurm usage and common directives, refer to the following resources:
+
+- [Slurm README](../../README.md)
+- [Placeholder Guide](../../README.md#placeholders)
+- [slurm-options.sh](../../slurm-options.sh)
 
 ## Serial MATLAB job ([serial/](./serial))
 

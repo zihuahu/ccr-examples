@@ -14,7 +14,10 @@ echo $ALPHAFOLD_DATA_DIR
 - Many of the examples you'll find online run AlphaFold in docker. You do not want to do this. Instead just substitute python3 docker/run_docker.py with the script provided by the alphfold module 
 run_alphafold.py. They will have the same CLI arguments.
 
-## Placeholders:
+## Additional Information
 
-Portions of this example batch script contain placeholders, denoted by square brackets. Refer to the 2_ApplicationSpecific 
-[README](../README.md) for details and options.
+For more details on placeholder values, Slurm usage and common directives, refer to the following resources:
+
+- [Slurm README](../../README.md)
+- [Placeholder Guide](../../README.md#placeholders)
+- [slurm-options.sh](../../slurm-options.sh)
