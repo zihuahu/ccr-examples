@@ -11,7 +11,7 @@ The lsdyna executables do not show up in the path any longer. To use them proper
 - Single Precision - shared memory parallel (SMP): `$EBROOTANSYS/v231/ansys/bin/linx64/lsdyna_sp.e`
 - Double Precision - SMP: `$EBROOTANSYS/v231/ansys/bin/linx64/lsdyna_dp.e`
 - Single precision - message passing parallel (MPP): `$EBROOTANSYS/v231/ansys/bin/linx64/lsdyna_sp_mpp.e`
-- Double precision - MPP: `mpiexec $EBROOTANSYS/v231/ansys/bin/linx64/lsdyna_dp_mpp.e`
+- Double precision - MPP: `$EBROOTANSYS/v231/ansys/bin/linx64/lsdyna_dp_mpp.e`
 
 ## Example Scripts:  
 
