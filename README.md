@@ -36,7 +36,7 @@ If you have an example you think would benefit users of the CCR community, you c
 
 - Keep examples organized in respective per example directories.
 - Do not include large data sets. Scripts should use `$ENV` variables to specify path to data/supplemental files.
-- Use [placeholders](slurm/0_Introductory/README.md) in example scripts when possible.
+- Use [placeholders](slurm/README.md) in example scripts when possible.
 - Use `$SLURM` variables to specify Slurm specific information (e.g., `$SLURM_JOB_ID`, `$SLURM_NPROCS`, `$SLURM_NODEFILE`, `$SLURMTMPDIR`, `$SLURM_SUBMIT_DIR`, etc).
 - Include explanatory comments in your files using the same format as similar examples.
 
