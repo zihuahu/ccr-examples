@@ -4,7 +4,7 @@ CCR does not support running Anaconda on its HPC systems natively for [these rea
 
 ## Building the container  
 
-Please refer to CCR's [container documentation](https://docs.ccr.buffalo.edu/en/latest/howto/containerization/) for information on building and using Apptainer.  This example provides an Apptainer definition file (`conda.def`) which lists a number of packages and installation steps so Apptainer can install these in an Ubuntu container environment.  This example also uses an environment file (`environment.yml`) to specify which conda packages to install during the build.  For most use cases, you will only need to modify the `environment.yml` file where you'll add additional Python and conda packages to install in your environment. This example utilizes the [conda-forge environment](https://conda-forge.org/) to align with the most recent appropriate use license guidance from Anaconda. 
+Please refer to CCR's [container documentation](https://docs.ccr.buffalo.edu/en/latest/howto/containerization/) for information on building and using Apptainer.  This example provides an Apptainer definition file (`conda.def`) which lists a number of packages and installation steps so Apptainer can install these in an Ubuntu container environment.  This example also uses an environment file (`environment.yml`) to specify which conda packages to install during the build.  For most use cases, you will only need to modify the `environment.yml` file where you'll add additional Python and conda packages to install in your environment. This example utilizes the [conda-forge environment](https://conda-forge.org/) to align with the most recent appropriate use license guidance from Anaconda.
 
 1. Start an interactive job
 
@@ -31,7 +31,6 @@ CCRusername@cpn-h23-04:~$ mkdir cache
 CCRusername@cpn-h23-04:~$ export APPTAINER_CACHEDIR=/projects/academic/[YourGroupName]/[CCRusername]/cache  
 
 ```
-
 
 3. Build your container  
 
