@@ -18,7 +18,7 @@ Portions of the example batch scripts which must be changed for the script to fu
 | `[cluster]`             | ub-hpc, faculty |
 | `[partition]`           | general-compute, debug, industry, scavenger, ub-laser, [other available options](https://docs.ccr.buffalo.edu/en/latest/hpc/clusters/#ub-hpc-compute-cluster) |
 | `[qos]`                 | Typically the same as `[partition]` - refer to [CCR docs](https://docs.ccr.buffalo.edu/en/latest/hpc/jobs/#slurm-directives-partitions-qos) for more information. |
-| `[SlurmAccountName]`    | Use the `slimits` command to see what accounts you have access to, if not specified, your default account will be used.  |
+| `[SlurmAccountName]`    | Use the `slimits` command to see what accounts you have access to. If not specified, your default account will be used.  |
 
 ## Getting Started ([0_Introductory/](./0_Introductory/README.md))
 
