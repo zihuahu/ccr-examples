@@ -18,7 +18,7 @@ While you may find some comments in the example files themselves, you can expect
 
 ## Running Examples
 
-In order to run any examples on the CCR, the files must first be moved to an appropriate directory.  This can be done by downloading raw files to your local machine through a web browser, and then uploading them to the CCR via a number of methods outlined in the documentation on [data transfer](https://docs.ccr.buffalo.edu/en/latest/hpc/data-transfer/).  Users may also clone the repository directly from GitHub onto CCR storage.  Please note that in some cases an example is made up of multiple files, each of which must be transferred and kept in the same relative paths to one another to run successfully.
+In order to run any examples on the CCR clusters, the files must first be moved to an appropriate directory.  This can be done by downloading raw files to your local machine through a web browser, and then uploading them to the CCR HPC environment via a number of methods outlined in the documentation on [data transfer](https://docs.ccr.buffalo.edu/en/latest/hpc/data-transfer/).  Users may also clone the repository directly from GitHub onto CCR storage.  Please note that in some cases an example is made up of multiple files, each of which must be transferred and kept in the same relative paths to one another to run successfully.
 
 After verifying that the desired example performs as expected when run as is, users are meant to modify the examples to suit their needs.  Information on what to modify and why can be found in associated `README` files, as well as in comments within the example files themselves.
 
@@ -34,7 +34,7 @@ Navigate to the directory with the example that you'd like to use and copy that 
 
 ## Adding Contributions
 
-If you have an example you think would benefit users of the CCR community, you can create a fork of this repository a pull request for CCR staff to review. If you do so, please try to align your submission with existing examples using the following guidelines:
+If you have an example you think would benefit users of the CCR community, you can create a fork of this repository and submit a pull request for CCR staff to review. If you do so, please try to align your submission with existing examples using the following guidelines:
 
 - Keep examples organized in respective per example directories.
 - Do not include large data sets. Scripts should use `$ENV` variables to specify path to data/supplemental files.
