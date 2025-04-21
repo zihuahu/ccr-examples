@@ -2,6 +2,8 @@
 
 This repository contains examples for use on [UB CCR's](https://buffalo.edu/ccr) high performance computing clusters.  These should be used in conjuction with [CCR's documentation](https://docs.ccr.buffalo.edu) - where the concepts and policies for using CCR's systems are explained.  As a supplement to the documentation, there are recorded workshops on a variety of topics available on [CCR's YouTube channel](https://youtube.com/@ubccr) which are accessible to all users, and an [Intro to CCR course](https://ublearns.buffalo.edu/d2l/le/discovery/view/course/285151) in UB Learns for users affiliated with the University at Buffalo.  
 
+While the repository is updated regularly, there is always a chance information contained herein is inaccurate.  Please report any issues by filing a [bug report](https://github.com/ubccr/ccr-examples/issues/new), or even better if you can correct the error, file a pull request with a fix!  Although you will see some application specific Slurm scripts or container instructions, there is not an example for every piece of software installed on CCR's systems.  Users are expected to modify existing examples for their specific application usage as appropriate.  If you have questions or run into problems using these examples, please submit a ticket to CCR Help, rather than submit an issue in Github.  
+
 ## Repository Contents
 
 - [slurm/](slurm/README.md) - Example Slurm batch jobs
@@ -31,8 +33,6 @@ cd ccr-examples
 Navigate to the directory with the example that you'd like to use and copy that script to your working directory.  Modify the script as appropriate for your workflow or applications.
 
 ## Adding Contributions
-
-While the repository is updated regularly, there is always a chance information contained herein is inaccurate.  Please report any issues by filing a [bug report](https://github.com/ubccr/ccr-examples/issues/new), or even better if you can correct the error, file a pull request with a fix!  Although you will see some application specific Slurm scripts or container instructions, there is not an example for every piece of software installed on CCR's systems.  Users are expected to modify existing examples for their specific application usage as appropriate.  If you have questions or run into problems using these examples, please submit a ticket to CCR Help, rather than submit an issue in Github.  
 
 If you have an example you think would benefit users of the CCR community, you can create a fork of this repository a pull request for CCR staff to review. If you do so, please try to align your submission with existing examples using the following guidelines:
 
