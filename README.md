@@ -8,13 +8,15 @@ This repository contains examples for use on [UB CCR's](https://buffalo.edu/ccr)
 - [containers/](containers/README.md) - Examples for using containers
 - [easybuild/](easybuild/README.md) - Examples for installing software with Easybuild
 
-## How to Use
+## Navigating the Repository
 
 Each major example topic is separated into `0_Introductory`, `1_Advanced` and `2_ApplicationSpecific` sub-directories (some of which are coming soon!).  The `0_Introductory` directories are meant to include the most basic of examples, with the contents of `1_Advanced` directories adding complexity in a modular and widely applicable manner.  The `2_ApplicationSpecific` directories include examples that require special settings or data.
 
 While you may find some comments in the example files themselves, you can expect to find additional information in `README` files associated with each example.  GitHub renders `README.md` files using Markdown syntax when viewed in web browsers.  This feature is leveraged throughout the repository, with hyperlinks provided for ease of navigation where applicable.  For many users, it will be easiest to parse the information in the `README` files using a web browser.
 
-In order to run any examples on the CCR, the files must first be moved to an appropriate directory.  This can be done by downloading raw files to your local machine through a web browser, and then uploading them to the CCR via a number of methods outlined in the documentation on [data transfer](https://docs.ccr.buffalo.edu/en/latest/hpc/data-transfer/).  Users may clone the repository directly from GitHub onto CCR storage.  Please note that in some cases an example is made up of multiple files, each of which must be transferred and kept in the same relative paths to one another to run successfully.
+## Running Examples
+
+In order to run any examples on the CCR, the files must first be moved to an appropriate directory.  This can be done by downloading raw files to your local machine through a web browser, and then uploading them to the CCR via a number of methods outlined in the documentation on [data transfer](https://docs.ccr.buffalo.edu/en/latest/hpc/data-transfer/).  Users may also clone the repository directly from GitHub onto CCR storage.  Please note that in some cases an example is made up of multiple files, each of which must be transferred and kept in the same relative paths to one another to run successfully.
 
 After verifying that the desired example performs as expected when run as is, users are meant to modify the examples to suit their needs.  Information on what to modify and why can be found in associated `README` files, as well as in comments within the example files themselves.
 
