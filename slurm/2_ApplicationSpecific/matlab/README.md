@@ -1,11 +1,6 @@
 # MATLAB on the CCR Clusters
 
-This directory includes examples of serial, multithreaded, and GPU  MATLAB jobs. (CCR Staff: Need more info here)
-
-## Placeholders:
-
-Portions of the example batch scripts contain placeholders, denoted by square brackets. Refer to the 2_ApplicationSpecific 
-[README](../README.md) for details and options.
+This directory includes examples of serial, multithreaded, and GPU  MATLAB jobs.
 
 ## Serial MATLAB job ([serial/](./serial))
 

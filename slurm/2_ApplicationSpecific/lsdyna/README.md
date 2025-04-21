@@ -15,15 +15,9 @@ The lsdyna executables do not show up in the path any longer. To use them proper
 
 ## Example Scripts:  
 
-Provided in this repo are two example lsdyna slurm jobs: [lsdyna.sh](./lsdyna_single_node_smp.sh) a script for running shared memory parallel (SMP) LS-DYNA, [lsdyna_single_node_mpp.sh](./lsdyna_single_node_smp.sh) and [lsdyna_multi_node_mpp.sh](./lsdyna_multi_node_mpp.sh) scripts with examples for message passing parallel (MPP) LS-DYNA.  We provide examples of single and double precision for both options.  Please uncomment the line with the command you want to use and add a `#` to the beginning of the line with the command you don't want to use.  SMP should be run on a single node.  MPP can run on multiple cores of a single node or potentially across multiple nodes.  You can find an example input file `ball_and_plate.k` for testing purposes on CCR's systems in `/util/software/examples/lsdyna`.  These scripts may need to be modified to properly work for your problem.  Please refer to the Ansys LS-DYNA [manuals](https://lsdyna.ansys.com/manuals/) for further information and options.  
+Provided in this repo are two example lsdyna slurm jobs: [lsdyna.sh](./lsdyna_single_node_smp.sh) a script for running shared memory parallel (SMP) LS-DYNA, [lsdyna_single_node_mpp.sh](./lsdyna_single_node_smp.sh) and [lsdyna_multi_node_mpp.sh](./lsdyna_multi_node_mpp.sh) scripts with examples for message passing parallel (MPP) LS-DYNA.  We provide examples of single and double precision for both options.  Please uncomment the line with the command you want to use and add a `#` to the beginning of the line with the command you don't want to use.  SMP should be run on a single node.  MPP can run on multiple cores of a single node or potentially across multiple nodes.  You can find an example input file `ball_and_plate.k` for testing purposes on CCR's systems in `/util/software/examples/lsdyna`.  These scripts may need to be modified to properly work for your problem.  Please refer to the Ansys LS-DYNA [manuals](https://lsdyna.ansys.com/manuals/) for further information and options.
 
-## Placeholders:
-
-Portions of this example batch script contain placeholders, denoted by square brackets. Refer to the 2_ApplicationSpecific 
-[README](../README.md) for details and options.
-
-
-## Memory Specification:  
+## Memory Specification:
 
 The LS-DYNA command line option MEMORY specifies memory per node with a base unit words. This is not the same thing as requesting memory (or RAM) for your job.  The argument can be specified in words or megawords (denoted by m). For single precision LS-DYNA, a word is 4 bytes and a megaword is 4 MB. For double precision, a word is 8 bytes and a megaword is 8MB.
 
