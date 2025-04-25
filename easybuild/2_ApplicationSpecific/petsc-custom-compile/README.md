@@ -1,6 +1,6 @@
 # Example PETSc custom easybuild
 
-This is an example of building PETSc with easybuild using a slurm job. (CCR Staff: Need more info here.)
+This is an example of building PETSc with easybuild using a slurm job. 
 
 ## Placeholders
 
