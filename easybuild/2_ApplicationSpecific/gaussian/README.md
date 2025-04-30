@@ -35,7 +35,6 @@ $ echo $CCR_CUSTOM_BUILD_PATHS > ~/.ccr/modulepaths
 $ exit  (to log out of the vortex login node)
 ```
 
-Log back into vortex to re-initialize your environment
 
 2. Login to a login node and then into a [compile node](https://docs.ccr.buffalo.edu/en/latest/hpc/clusters/#compile-nodes)   
 ```
@@ -43,14 +42,14 @@ ssh [CCRusername]@vortex.ccr.buffalo.edu
 $ ssh compile
 ```
 
-3. Upload your Gaussian software to CCR and place in your home or project directory
+3. Upload your Gaussian software installation file to CCR and place in your home or project directory
 
 4. Create Gaussian Easybuild recipe  
 In the folder that your Gaussian software was uploaded to, create a file called `Gaussian-16.C.02-AVX2.eb`  Copy the contents from [this example](Gaussian-16.C.02-AVX2.eb) Easybuild recipe and place them in your new recipe file.  Edit the file as described, save and exit the editor.  There are several things to be aware of with this recipe file:  
 - You MUST name the file in the same way that CCR provides in this example
 - If you're installing a different version of Gaussian, you must update the Easybuild recipe name with the updated version number AND change the version number within your Easybuild recipe on line 7.  
 - You MUST update line 32 of your Easybuild recipe with the full path of where you've stored your installation media. What we have for that line in our example is simply a placeholder.  
-- You will need to update the checksum value on line 33 to match the checksum of your software installation media.  What we have for that line in our example is simply a placeholder.  To check the checksum of a file, run:  `sha256sum filename`  
+- You will need to update the checksum value on line 33 to match the checksum of your software installation media.  To get the checksum of a file, run:  `sha256sum filename`  
 
 5. Prepare to install the software
 
@@ -75,7 +74,7 @@ $ eb Gaussian-16.C.02-AVX2.eb --umask=007
 Once the installation completes successfully, when you search for the module you should see it listed in a section at the top with your group's installation path listed.  For example:  
 
 ```
-$ ccruser@login:~$ module spider gaussian
+$ module spider gaussian
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   gaussian: gaussian/16.C.02-AVX2
@@ -109,7 +108,11 @@ $ ccruser@login:~$ module spider gaussian
 
 If you're not seeing your module, make sure you've setup your custom module paths correctly, as described [here](https://docs.ccr.buffalo.edu/en/latest/software/building/#building-modules-for-your-group) and demonstrated in step 1 above.  
 
-
+To load the module run:
+```
+$ module load gaussian/16.C.02-AVX2
+$ gaussian --help
+```
 
 ## Troubleshooting  
 
