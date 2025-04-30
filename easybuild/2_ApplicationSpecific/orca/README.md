@@ -43,7 +43,7 @@ ssh [CCRusername]@vortex.ccr.buffalo.edu
 $ ssh compile
 ```
 
-3. Upload your Orca software to CCR and place in your home or project directory
+3. Upload your Orca software to CCR and place in your home or project directory.  We recommend downloading the x86_64, `.tar.xv` archive version.  
 
 4. Create Orca Easybuild recipe  
 In the folder that your Orca software was uploaded to, create a file called `ORCA-6.0.1-gompi-2021b.eb`  Copy the contents from [this example](ORCA-6.0.1-gompi-2021b.eb) Easybuild recipe and place them in your new recipe file.  Edit the file as described, save and exit the editor.  There are several things to be aware of with this recipe file:  
