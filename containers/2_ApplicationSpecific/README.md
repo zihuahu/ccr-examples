@@ -2,7 +2,7 @@
 
 ## How to use
 
-This directory contains examples for building and running specific containers with Apptainer, including applications that require specialized container setups. You will not find an example for every piece of software installed on CCR's systems. These examples should be used as guidance and are not set in stone. Please start with these examples, test for your own use case, and scale as required. 
+This directory contains examples for building and running specific containers with Apptainer, including applications that require specialized container setups. You will not find an example for every software application. These container examples should be used as guidance and can be modified for your own use case.
 
 Please refer to CCR's [container documentation](https://docs.ccr.buffalo.edu/en/latest/howto/containerization/) for information on building and using Apptainer.
 

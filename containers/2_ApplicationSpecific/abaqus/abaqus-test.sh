@@ -26,5 +26,6 @@
 ##   Specify real memory required per node. Default units are megabytes
 #SBATCH --mem=10000
 
-##   Run the abaqus job inside the Apptainer container
-apptainer exec -B /util:/util,/scratch:/scratch /util/software/containers/x86_64/abaqus-2024.sif /bin/bash
+##   Run abaqus inside the Apptainer container
+## Replace [options] with the abaqus options you want to use
+apptainer exec -B /util:/util,/scratch:/scratch /util/software/containers/x86_64/abaqus-2024.sif abaqus [options]

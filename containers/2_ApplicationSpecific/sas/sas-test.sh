@@ -27,4 +27,4 @@
 #SBATCH --mem=10000
 
 ##   Run SAS using a SAS script inside the Apptainer container
-apptainer exec -B /scratch:/scratch sas94.sif /usr/local/SASHome/SASFoundation/9.4/sas ~/myjob.sas -log ~/sasoutput.log
+apptainer exec -B /scratch:/scratch /[path-to-container]/sas94.sif /usr/local/SASHome/SASFoundation/9.4/sas ~/myjob.sas -log ~/sasoutput.log
