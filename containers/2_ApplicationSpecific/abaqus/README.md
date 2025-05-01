@@ -9,7 +9,7 @@ This is a large file (10GB) so please be sure to copy it to a location where you
 
 There are several options to run Abaqus from the command line. If you're unsure of the options to provide or want to run the application more interactively, use the `shell` option with Apptainer. This will drop you into the container and then you can work with Abaqus interactively. For example:
 ```
-apptainer shell -B /util:/util,/scratch:/scratch /[path-to-container]/abaqus-2024.sif /bin/bash
+apptainer shell -B /util:/util,/scratch:/scratch /[path-to-container]/abaqus-2024.sif
 Apptainer> abaqus help
 ```
 
