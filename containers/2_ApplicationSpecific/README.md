@@ -14,6 +14,7 @@ Please refer to CCR's [container documentation](https://docs.ccr.buffalo.edu/en/
 | [VASP](./vasp)                       | Example VASP container with steps for building and running via Apptainer |
 | [Abaqus](./abaqus)                   | Guide to running Abaqus with Apptainer via Slurm batch script, command line, GUI access, and GPU support |
 | [SAS](./sas)                         | Guide for running SAS using Apptainer via Slurm batch script, command line, and GUI access |
+| [Juicer](./juicer)                   | Example of running the containerized version of Juicer at CCR using Apptainer |
 
 ## Additional Information
 

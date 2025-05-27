@@ -33,9 +33,9 @@
 #SBATCH --mail-user=<your email>
 #SBATCH --mail-type=END
 
-##   Load module R and bioconductor for edgeR library 
-module load gcc/11.2.0 openmpi/4.1.1 r/4.2.0 r-bundle-bioconductor/3.15-R-4.2.0  
-  
+##   Load R bioconductor module for edgeR library 
+module load gcc/11.2.0 openmpi/4.1.1 r-bundle-bioconductor/3.15-R-4.2.0  
+
 ##   Run R script. The following is one of a few ways to launch R scripts
 R < ex.edgeR --no-save 
 
