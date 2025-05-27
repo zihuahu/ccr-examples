@@ -20,3 +20,7 @@ We provide a few scripts that users can run on the login nodes to see what's cur
 Add `-all` to view information for all nodes: `/usr/local/bin/scavenger-checker-all`
 - To get a detailed breakdown of all compute nodes in the cluster, use: `/usr/local/bin/scavenger-profiler`, 
 For a complete view across all nodes, use: `/usr/local/bin/scavenger-profiler-all`
+
+## Disable Automatic Requeuing:
+
+As mentioned above, jobs in the scavenger partition that are preempted and cancelled are automatically requeued. If you don't want your job requeued, use the Slurm option `--no-requeue`.
