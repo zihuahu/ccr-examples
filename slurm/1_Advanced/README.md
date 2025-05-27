@@ -9,6 +9,8 @@ This directory contains examples for more complex use cases, such as job arrays,
 | Topic                          | Description |
 |--------------------------------|-------------|
 | [Scavenger](./Scavenger)       | Example of submitting a job to the scavenger partition, with additional context and usage details in the [README](./Scavenger/README.md) |
+| [JobArrays](./JobArrays)       | (Coming Soon) |
+| [GPUs](./GPUs)                 | (Coming Soon) |
 
 ## Additional Information
 
