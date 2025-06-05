@@ -86,7 +86,7 @@ From: ubuntu:latest
   export FFLAGS="${FFLAGS} -I/usr/local/include"
   export LDFLAGS="${LDFLAGS} -L/usr/local/lib -Wl,-rpath,/usr/local/lib"
   export PIP_TARGET="$(python3 -c 'import sys; print("/usr/local/lib/python" + str(sys.version_info.major) + "." + str(sys.version_info.minor) + "/site-packages")')"
-  export PYTHONPATH="${PIP_TARGET}:${PYTHONPATH}"
+  export PYTHONPATH="${PIP_TARGET}:$(python3 -c 'import sys; print("/usr/local/lib/python" + str(sys.version_info.major) + "." + str(sys.version_info.minor) + "/dist-packages")'):${PYTHONPATH}"
   export PATH="${PATH}:${PIP_TARGET}/bin"
 
   ##############################################################################
@@ -129,7 +129,7 @@ From: ubuntu:latest
   cd ${HOME}
   # Annoyingly, pybedtools (a fanc dependency) will not install with PIP_TARGET
   # set, so install that first...
-  PIP_TARGET="" pip3 install --prefix="${PIP_TARGET}" pybedtools
+  PIP_TARGET="" pip3 install --prefix=/usr pybedtools
   #
   # Oddly, installing fanc with pip doesn't install the scripts "fanc" and
   # "fancplot"
