@@ -85,6 +85,7 @@ From: ubuntu:latest
   export CXXFLAGS="${CXXFLAGS} -I/usr/local/include"
   export FFLAGS="${FFLAGS} -I/usr/local/include"
   export LDFLAGS="${LDFLAGS} -L/usr/local/lib -Wl,-rpath,/usr/local/lib"
+  export CMAKE_BUILD_PARALLEL_LEVEL="$(nproc)"
   export PIP_TARGET="$(python3 -c 'import sys; print("/usr/local/lib/python" + str(sys.version_info.major) + "." + str(sys.version_info.minor) + "/site-packages")')"
   export PYTHONPATH="${PIP_TARGET}:$(python3 -c 'import sys; print("/usr/local/lib/python" + str(sys.version_info.major) + "." + str(sys.version_info.minor) + "/dist-packages")'):${PYTHONPATH}"
   export PATH="${PATH}:${PIP_TARGET}/bin"
@@ -116,7 +117,7 @@ From: ubuntu:latest
   cd ${HOME}
   git clone https://github.com/arq5x/bedtools2.git
   cd bedtools2
-  make
+  make -j $(nproc)
   #cd test/
   #sed -E -i 's/^[[:space:]]*ulimit/#ulimit/' test.sh
   #bash test.sh
@@ -162,7 +163,7 @@ From: ubuntu:latest
   make install
   ## install htslib
   cd htslib-1.21
-  make
+  make -j $(nproc)
   make install
 
   ##############################################################################
@@ -227,7 +228,7 @@ From: ubuntu:latest
   # I install get_qc.py in /usr/local/bin so change the docs to reflect this
   sed -i -E -e 's|python3[[:space:]]+\./Micro-C/||' source/library_qc.rst
   #
-  make text man info html
+  make -j $(nproc) text man info html
   mkdir build/man1
   mv build/man/* build/man1/
   mv build/man1/ build/man/
@@ -297,7 +298,7 @@ From: ubuntu:latest
   mkdir build
   cd build
   cmake ..
-  make
+  make -j $(nproc)
   install -p -m 755 "straw" "/usr/local/bin"
 
   ##############################################################################
@@ -362,7 +363,7 @@ From: ubuntu:latest
   cd ${HOME}
   git clone https://github.com/4dn-dcic/pairix
   cd pairix
-  make
+  make -j $(nproc)
   python setup.py install
   cd ./bin/
   install -p -m 755 pairix bgzip pairs_merger streamer_1d /usr/local/bin
@@ -391,7 +392,7 @@ From: ubuntu:latest
   # I install the scripts in /usr/local/bin so change the docs to reflect this
   sed -i -E -e 's|\./HiChiP/||' -e 's|python3[[:space:]]+||' source/library_qc.rst
   #
-  make text man info html
+  make -j $(nproc) text man info html
   mkdir build/man1
   mv build/man/* build/man1/
   mv build/man1/ build/man/
