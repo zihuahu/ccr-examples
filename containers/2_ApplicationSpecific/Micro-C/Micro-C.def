@@ -56,7 +56,7 @@ From: ubuntu:latest
    vim
 
   # No idea why these links don't exist by default!
-  cd /usr/lib/x86_64-linux-gnu/
+  cd /usr/lib/$(arch)-linux-gnu/
   ln -s libopenblas64.a libopenblas.a
   ln -s libopenblas64.so libopenblas.so
   ln -s libopenblas64.so.0 libopenblas.so.0
@@ -403,7 +403,7 @@ From: ubuntu:latest
   # Install the aws CLI tool (referred to in the HiChIP docs)
   ##############################################################################
   cd ${HOME}
-  curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+  curl "https://awscli.amazonaws.com/awscli-exe-linux-$(arch).zip" -o "awscliv2.zip"
   unzip awscliv2.zip
   ./aws/install
 
