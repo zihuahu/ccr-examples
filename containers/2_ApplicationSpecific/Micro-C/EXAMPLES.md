@@ -1,7 +1,11 @@
 # Examples of running the commands shown in the Micro-C Pipeline Documents
 
-This assumes you have started an interactive Slurm session and started the container
-like this:
+The following examples assume you have started an interactive Slurm session with multiple cores in the job e.g.
+
+```
+$ salloc --cluster=ub-hpc --partition=general-compute --qos=general-compute --exclusive --time=10:00:00
+```
+...and started the container like this:
 
 ```
 $ apptainer shell -B /util:/util,/scratch:/scratch,/projects:/projects Micro-C-$(arch).sif

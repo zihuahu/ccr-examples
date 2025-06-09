@@ -11,7 +11,7 @@ Apptainer is not available on the CCR login nodes and the compile nodes may not 
 See CCR docs for more info on [running jobs](https://docs.ccr.buffalo.edu/en/latest/hpc/jobs/#interactive-job-submission)
 
 ```
-$ salloc --cluster=ub-hpc --partition=debug --qos=debug --mem=64GB --time=01:00:00
+$ salloc --cluster=ub-hpc --partition=debug --qos=debug --exclusive --time=01:00:00
 salloc: Pending job allocation 19781052
 salloc: job 19781052 queued and waiting for resources
 salloc: job 19781052 has been allocated resources
