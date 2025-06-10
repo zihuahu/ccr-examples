@@ -5,10 +5,10 @@ This directory includes a [basic example](./BasicExample.sh) that shows how to r
 ## How to use
 
 CCR's academic cluster has a mix of compute nodes from various generations of hardware with a variety of GPU types in them. Most of these compute nodes have either 1 or 2 GPUs, while one node has 12 
-A16 GPUs. Though you could request multiple nodes with GPUs, our GPU nodes are under heavy demand and wait times can be long, even when only requesting a single GPU.
+A16 GPUs.
 
 The provided [script](./BasicExample.sh) is a minimal Slurm example that uses a GPU. Make sure to modify parts of the script to suit your GPU requirements and specific needs. For 
-more details, refer to the [1_Advanced README](../README.md).
+more details, refer to the [Advanced README](../README.md).
 
 If you need more than the default, you can specify hardware requirements using the Slurm `--constraint` directive in the batch script or using the Node Features field in OnDemand app forms. Supported GPU types include `A40`, `A100`, `H100`, `GH200`, and `V100`.
 
@@ -25,5 +25,16 @@ CCRusername@login:~$ ccr-jobview-url [jobid] [cluster]
 ```
 Then you would paste the outputed link into your browser.
 
+## Advanced
+
+Though you could request multiple nodes with GPUs, our GPU nodes are under heavy demand and wait times can be long, even when only requesting a single GPU. Please monitor your jobs using Grafana to 
+ensure your code runs on 2 GPUs before requesting multiple nodes.
+
+**Using all CPUs on a multi-GPU node**: By default, GPUs are bound to specifc CPUs, so even with the `--exclusive` flag, your job only uses CPUs tied to your GPU. To access all CPUs on the node, add 
+this to your script:
+```
+#SBATCH --gres-flags=disable-binding
+```
+More information can be found [here](https://docs.ccr.buffalo.edu/en/latest/faq/#how-do-i-request-all-cpus-on-a-node-with-more-than-one-gpu).
 
 
