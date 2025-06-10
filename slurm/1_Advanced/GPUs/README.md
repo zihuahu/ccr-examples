@@ -17,7 +17,7 @@ For an example, see the [slurm-options.sh](../../slurm-options.sh) file. For add
 ## Monitoring GPU Usage with Grafana Charts
 
 CCR provides detailed performance metrics through Grafana charts, including GPU, CPU, and memory usage for completed jobs. 
-- Access via OnDemand: Navigate to Active Jobs, click the dropdown for your job, and select `View details metrics` for Grafana.
+- Access via OnDemand: Navigate to Active Jobs, click the dropdown for your job, and select `View detailed metrics` for Grafana.
 - Access via Terminal: You need to query Slurm for the appropriate start and end times and get the node list. To do this, we provide a script that can be run in the terminal that creates the Grafana 
 URL for your job:
 ```
