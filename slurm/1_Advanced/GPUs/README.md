@@ -10,7 +10,7 @@ A16 GPUs.
 The provided [script](./BasicExample.sh) is a minimal Slurm example that uses a GPU. Make sure to modify parts of the script to suit your GPU requirements and specific needs. For 
 more details, refer to the [Advanced README](../README.md).
 
-If you need more than the default, you can specify hardware requirements using the Slurm `--constraint` directive in the batch script or using the Node Features field in OnDemand app forms. Supported GPU types include `A40`, `A100`, `H100`, `GH200`, and `V100`.
+If you need more than the default, you can specify hardware requirements using the Slurm `--constraint` directive in the batch script or using the Node Features field in OnDemand app forms. Supported GPU types include `A16`, `A40`, `A100`, `H100`, `GH200`, and `V100`.
 
 For an example, see the [slurm-options.sh](../../slurm-options.sh) file. For additional options and details refer to our [documentation](https://docs.ccr.buffalo.edu/en/latest/hpc/jobs/#slurm-directives-partitions-qos).
 
