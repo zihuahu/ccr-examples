@@ -16,6 +16,8 @@ For an example, see the [slurm-options.sh](../../slurm-options.sh) file. For add
 
 ## Monitoring GPU Usage
 
+### Using Grafana Charts
+
 CCR provides detailed performance metrics through Grafana charts, including GPU, CPU, and memory usage for running and completed jobs. 
 - Access via OnDemand: Navigate to Active Jobs, click the dropdown for your job, and select `View detailed metrics` for Grafana.
 - Access via Terminal: You need to query Slurm for the appropriate start and end times and get the node list. To do this, we provide a script that can be run in the terminal that creates the Grafana 
@@ -25,7 +27,36 @@ CCRusername@login:~$ ccr-jobview-url [jobid] [cluster]
 ```
 Then you would paste the outputed link into your browser.
 
+### Using NVIDIA Tools
+
+Login to the node where your job is currently running, following [these instructions](https://docs.ccr.buffalo.edu/en/latest/hpc/login/#compute-node-logins). Once on the node use this command to see 
+the GPU(s) your job has been assigned and the current usage:
+```
+CCRusername@cpn-xxx-xx:~$ nvidia-smi
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 570.86.15              Driver Version: 570.86.15      CUDA Version: 12.8     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA GH200 480GB             On  |   00000009:01:00.0 Off |                    0 |
+| N/A   27C    P0             73W /  700W |       1MiB /  97871MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+```
+
 ## Advanced
+
+### Running Across Multiple GPU Nodes
 
 Though you could request multiple nodes with GPUs, our GPU nodes are under heavy demand and wait times can be long, even when only requesting a single GPU. Please monitor your jobs using Grafana to 
 ensure your code runs on 2 GPUs before requesting multiple nodes.
@@ -39,4 +70,11 @@ this to your script:
 ```
 More information can be found [here](https://docs.ccr.buffalo.edu/en/latest/faq/#how-do-i-request-all-cpus-on-a-node-with-more-than-one-gpu).
 
+### GH200 GPU Nodes
+
+The two NVIDIA GraceHopper compute nodes each have 2 GH200 GPUs and 72 ARM64 Neoverse CPUs and are available in the arm64 partition. For access to this partition, PIs should [request an 
+allocation](https://docs.ccr.buffalo.edu/en/latest/portals/coldfront/#request-an-allocation) in ColdFront. The CPUs in these compute nodes are ARM64 based architecture and will require codes to be 
+compiled for that architecture. To manually compile, request a node using an [interactive login](https://docs.ccr.buffalo.edu/en/latest/hpc/jobs/#interactive-job-submission) where you'll be able to 
+access compilers appropriate for this architecture. We recommend using [NVIDIA containers](https://docs.ccr.buffalo.edu/en/latest/howto/containerization/#arm64-containers) specifically for `arm64` 
+architecture rather than compiling your own codes.
 
