@@ -86,15 +86,15 @@ From: ubuntu:latest
   export FFLAGS="${FFLAGS} -I/usr/local/include"
   export LDFLAGS="${LDFLAGS} -L/usr/local/lib -Wl,-rpath,/usr/local/lib"
   export CMAKE_BUILD_PARALLEL_LEVEL="$(nproc)"
-  export PIP_TARGET="$(python3 -c 'import sys; print("/usr/local/lib/python" + str(sys.version_info.major) + "." + str(sys.version_info.minor) + "/site-packages")')"
-  export PYTHONPATH="${PIP_TARGET}:$(python3 -c 'import sys; print("/usr/local/lib/python" + str(sys.version_info.major) + "." + str(sys.version_info.minor) + "/dist-packages")'):${PYTHONPATH}"
-  export PATH="${PATH}:${PIP_TARGET}/bin"
+  pip_install_dir="$(python3 -c 'import sys; print("/usr/local/lib/python" + str(sys.version_info.major) + "." + str(sys.version_info.minor) + "/dist-packages")')"
+  export PYTHONPATH="${pip_install_dir}:${PYTHONPATH}"
+  export PATH="${PATH}:${pip_install_dir}/bin"
 
   ##############################################################################
   ## Install dependencies, deeptools and cooler
   ##############################################################################
   cd ${HOME}
-  pip install numpy \
+  pip install --prefix=/usr numpy \
    cython \
    pandas \
    mkdocs \
@@ -128,17 +128,13 @@ From: ubuntu:latest
   ## Install fanc
   ##############################################################################
   cd ${HOME}
-  # Annoyingly, pybedtools (a fanc dependency) will not install with PIP_TARGET
-  # set, so install that first...
-  PIP_TARGET="" pip3 install --prefix=/usr pybedtools
-  #
   # Oddly, installing fanc with pip doesn't install the scripts "fanc" and
   # "fancplot"
-  #pip3 install fanc
+  #pip3 install --prefix=/usr fanc
   # ...so we install from git
   git clone http://www.github.com/vaquerizaslab/fanc
   cd fanc
-  pip install .
+  pip install --prefix=/usr .
   install -p -m 755 bin/* /usr/local/bin
 
   ##############################################################################
@@ -172,7 +168,7 @@ From: ubuntu:latest
   cd ${HOME}
   git clone https://github.com/open2c/pairtools
   cd pairtools
-  #pip install -e ./ --no-build-isolation
+  #pip install -e ./ --no-build-isolation --prefix=/usr
   #python setup.py sdist
   python setup.py build
   python setup.py install
@@ -292,7 +288,7 @@ From: ubuntu:latest
   ## Install Straw
   ##############################################################################
   cd /opt/Micro-C/
-  PIP_TARGET="" pip3 install --prefix=/usr hic-straw
+  pip3 install --prefix=/usr hic-straw
   git clone https://github.com/aidenlab/straw.git
   cd straw/C++
   mkdir build
@@ -419,7 +415,7 @@ From: ubuntu:latest
 %environment
   export LANG=en_US.UTF-8 
   export LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:/usr/local/lib"
-  export PYTHONPATH="$(python3 -c 'import sys; print("/usr/local/lib/python" + str(sys.version_info.major) + "." + str(sys.version_info.minor) + "/site-packages")'):$(python3 -c 'import sys; print("/usr/local/lib/python" + str(sys.version_info.major) + "." + str(sys.version_info.minor) + "/dist-packages")'):${PYTHONPATH}"
-  export PATH="${PATH}:$(python3 -c 'import sys; print("/usr/local/lib/python" + str(sys.version_info.major) + "." + str(sys.version_info.minor) + "/site-packages/bin")'):/opt/Micro-C/IGV_2.19.4"
+  export PYTHONPATH="$(python3 -c 'import sys; print("/usr/local/lib/python" + str(sys.version_info.major) + "." + str(sys.version_info.minor) + "/dist-packages")'):${PYTHONPATH}"
+  export PATH="${PATH}:$(python3 -c 'import sys; print("/usr/local/lib/python" + str(sys.version_info.major) + "." + str(sys.version_info.minor) + "/dist-packages/bin")'):/opt/Micro-C/IGV_2.19.4"
   export MANPATH="${MANPATH}:/opt/Micro-C/docs/build/man:/opt/Micro-C/HiChiP/docs/build/man"
 
