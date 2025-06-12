@@ -493,7 +493,7 @@ max 139.0
 0% 
 [...]
 100% 
-0 domains written to file: /projects/academic/ccradmintest/tkewtest/Micro-C/test_03/TAD_calls/10000_blocks.bedpe
+0 domains written to file: /projects/academic/[...]/TAD_calls/10000_blocks.bedpe
 Arrowhead complete
 ```
 
@@ -516,7 +516,7 @@ max 139.0
 0% 
 [...]
 100% 
-0 domains written to file: /projects/academic/ccradmintest/tkewtest/Micro-C/test_03/TAD_calls/5000_blocks.bedpe
+0 domains written to file: /projects/academic/[...]/TAD_calls/5000_blocks.bedpe
 Arrowhead complete
 ```
 
@@ -530,7 +530,7 @@ sample output
 
 
 The distance limit is set to 2Mbp
-/projects/academic/ccradmintest/tkewtest/Micro-C/test_03/../zzz/mustache/mustache/mustache.py:1028: FutureWarning: Series.__getitem__ treating keys as positions is deprecated. In a future version, integer keys will always be treated as labels (consistent with DataFrame behavior). To access a value by position, use `ser.iloc[pos]`
+/usr/local/lib/python3.12/dist-packages/mustache_hic-1.3.3-py3.12.egg/mustache/mustache.py:1028: FutureWarning: Series.__getitem__ treating keys as positions is deprecated. In a future version, integer keys will always be treated as labels (consistent with DataFrame behavior). To access a value by position, use `ser.iloc[pos]`
   if clr.chromsizes[i] > 1000000:
 Reading contact map...
 0 8000000
