@@ -2,7 +2,7 @@
 
 ## Building the container
 
-A brief guide to building the openff-toolkit container follows:<br/>
+A brief guide to building the Micro-C container follows:<br/>
 Please refer to CCR's [container documentation](https://docs.ccr.buffalo.edu/en/latest/howto/containerization/) for more detailed information on building and using Apptainer.
 
 1. Start an interactive job
