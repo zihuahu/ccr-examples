@@ -7,6 +7,8 @@ Please Note: Graphical output will only display in an [OnDemand portal](https://
 A brief guide to building the OpenSees container follows:<br/>
 Please refer to CCR's [container documentation](https://docs.ccr.buffalo.edu/en/latest/howto/containerization/) for more detailed information on building and using Apptainer.
 
+NOTE: for building on the ARM64 platform see [BUILD-ARM64.md](./BUILD-ARM64.md)
+
 1. Start an interactive job
 
 Apptainer is not available on the CCR login nodes and the compile nodes may not provide enough resources for you to build a container.  We recommend requesting an interactive job on a compute node to conduct this build process.<br/>
