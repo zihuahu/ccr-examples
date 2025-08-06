@@ -12,9 +12,8 @@
 #SBATCH --account=[SlurmAccountName]
 
 #SBATCH --constraint=ARM64
-#SBATCH --mem=64G
 ## NOTE: this line is requred to avoid odd X86_64 errors
-#SBATCH --export=HOME,TERM
+#SBATCH --export=HOME,TERM,SHELL
 
 ## NOTE: This is tested with the ccrsoft/2024.04 software release
 ##       The ccrsoft/2023.01 software release does not support ARM64 nodes

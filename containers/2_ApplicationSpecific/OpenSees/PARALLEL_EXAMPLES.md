@@ -6,13 +6,14 @@ The following examples were run on the ub-hpc cluster with the [ccrsoft/2024.04]
 ## OpenSeesSP example
 
 ```
-module -t list 2>&1 | grep ccrsoft/2024.04
+module -t list
 
 ```
 
 command output:
 
 > ```
+> [...]
 > ccrsoft/2024.04
 > ```
 
@@ -147,13 +148,14 @@ sample command output:
 
 
 ```
-module -t list 2>&1 | grep ccrsoft/2024.04
+module -t list
 
 ```
 
 command output:
 
 > ```
+> [...]
 > ccrsoft/2024.04
 > ```
 

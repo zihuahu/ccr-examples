@@ -28,17 +28,18 @@ Open a terminal with:
 [Applications][Terminal Emulator]
 
 cd to the directory where you want the test scripts and data to reside
-In my test case:
+e.g.
 
 ```
-cd /projects/academic/ccradmintest/tkewtest/OpenSees/test-x86_64
+cd /projects/academic/[YourGroupName]/OpenSees/test-x86_64
 ```
 
 ...and start the container shell
 (change the path to your OpenSees .sif file)
 
 ```
-apptainer shell -B /util:/util,/scratch:/scratch,/projects:/projects /projects/academic/ccradmintest/tkewtest/OpenSees/OpenSees-$(arch).sif
+apptainer shell -B /util:/util,/scratch:/scratch,/projects:/projects \
+ /projects/academic/[YourGroupName]/OpenSees/OpenSees-$(arch).sif
 ```
 
 All the following examples are run from the "Apptainer> " prompt
