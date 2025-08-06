@@ -32,7 +32,7 @@ sample outout:
 You should now be on the compute node allocated to you.  In this example we're using our project directory for our build directory.  Ensure you've placed your `OpenSees.def` file in your build directory
 
 ```
-cd /projects/academic/[YourGroupName]/[CCRusername]
+cd /projects/academic/[YourGroupName]/
 export APPTAINER_CACHEDIR=${SLURMTMPDIR}
 
 ```
@@ -64,7 +64,7 @@ salloc --cluster=ub-hpc --partition=general-compute --qos=general-compute --mem=
 
 
 ```
-cd /projects/academic/[YourGroupName]/[CCRusername]
+cd /projects/academic/[YourGroupName]/
 apptainer shell -B /util:/util,/scratch:/scratch,/projects:/projects OpenSees-$(arch).sif 
 Apptainer> OpenSees
 
@@ -93,16 +93,16 @@ Parallel MPI jobs can be run with OpenSeesSP or OpenSeesMP
 
 Parallel Slurm script examples (X86_64):
 
-[OpenSeesSP with "srun"](https://raw.githubusercontent.com/tonykew/ccr-examples/refs/heads/OpenSees/containers/2_ApplicationSpecific/OpenSees/slurm_OpenSeesSP_example.bash)  
-[OpenSeesSP with "mpirun"](https://raw.githubusercontent.com/tonykew/ccr-examples/refs/heads/OpenSees/containers/2_ApplicationSpecific/OpenSees/slurm_OpenSeesSP_mpirun_example.bash)
+[mainSP with "srun"](https://raw.githubusercontent.com/ubccr/ccr-examples/refs/heads/main/containers/2_ApplicationSpecific/OpenSees/slurm_OpenSeesSP_example.bash)  
+[mainSP with "mpirun"](https://raw.githubusercontent.com/ubccr/ccr-examples/refs/heads/main/containers/2_ApplicationSpecific/OpenSees/slurm_OpenSeesSP_mpirun_example.bash)
 
-[OpenSeesMP with "srun"](https://raw.githubusercontent.com/tonykew/ccr-examples/refs/heads/OpenSees/containers/2_ApplicationSpecific/OpenSees/slurm_OpenSeesMP_example.bash)  
-[OpenSeesMP with "mpirun"](https://raw.githubusercontent.com/tonykew/ccr-examples/refs/heads/OpenSees/containers/2_ApplicationSpecific/OpenSees/slurm_OpenSeesMP_mpirun_example.bash)
+[mainMP with "srun"](https://raw.githubusercontent.com/ubccr/ccr-examples/refs/heads/main/containers/2_ApplicationSpecific/OpenSees/slurm_OpenSeesMP_example.bash)  
+[mainMP with "mpirun"](https://raw.githubusercontent.com/ubccr/ccr-examples/refs/heads/main/containers/2_ApplicationSpecific/OpenSees/slurm_OpenSeesMP_mpirun_example.bash)
 
 Parallel ARM64 Slurm script examples:
 
-[OpenSeesSP](https://raw.githubusercontent.com/tonykew/ccr-examples/refs/heads/OpenSees/containers/2_ApplicationSpecific/OpenSees/slurm_ARM64_OpenSeesSP_example.bash)  
-[OpenSeesMP](https://raw.githubusercontent.com/tonykew/ccr-examples/refs/heads/OpenSees/containers/2_ApplicationSpecific/OpenSees/slurm_ARM64_OpenSeesMP_example.bash)
+[mainSP](https://raw.githubusercontent.com/ubccr/ccr-examples/refs/heads/main/containers/2_ApplicationSpecific/OpenSees/slurm_ARM64_OpenSeesSP_example.bash)  
+[mainMP](https://raw.githubusercontent.com/ubccr/ccr-examples/refs/heads/main/containers/2_ApplicationSpecific/OpenSees/slurm_ARM64_OpenSeesMP_example.bash)
 
 
 See the [OpenSees Documentation](https://opensees.github.io/OpenSeesDocumentation) website and the [OpenSees Parallel](https://opensees.berkeley.edu/OpenSees/parallel/parallel.php) website for more info on OpenSees  
