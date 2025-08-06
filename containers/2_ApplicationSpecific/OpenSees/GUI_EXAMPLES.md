@@ -2,7 +2,7 @@
 
 These examples must be run in CCR's [OnDemand portal](https://ondemand.ccr.buffalo.edu)
 
-All these examples take less thatn an hour to run, so we can use the debug queue.
+All these examples take less than an hour to run, so we can use the debug queue.
 
 
 Open a browser window to our [OnDemand portal](https://ondemand.ccr.buffalo.edu)
@@ -118,7 +118,7 @@ Run the Earthquake Analysis
 python RCFrameEarthquake.py
 ```
 
-This will produce the following text outpu:
+This will produce the following text output:
 
 > ```
 > ==========================

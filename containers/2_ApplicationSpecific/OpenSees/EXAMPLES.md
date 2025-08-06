@@ -2,7 +2,7 @@
 
 This is a selection of examples from [UC Berkeley OpenSees Examples](https://opensees.berkeley.edu/wiki/index.php?title=Examples) and [OpenSeesPy Examples](https://openseespydoc.readthedocs.io/en/latest/src/examples.html)
 
-There are both TCL sctips and Python scripts
+There are both TCL scripts and Python scripts
 
 None of these example produces graphical output (graphical output will only be seen in CCR's [OnDemand portal](https://ondemand.ccr.buffalo.edu))
 
@@ -54,7 +54,7 @@ expected output:
 > Done!
 > ```
 
-The run procuded output files in a Data subdirectory
+The run produced output files in a Data subdirectory
 
 ```
 ls -l Data/
@@ -102,7 +102,7 @@ expected output:
 > -rw-rw-r-- 1 [CCRusername] nogroup  3890 Aug 30  2010 rotSpring2DModIKModel.tcl
 > ```
 
-There are two pushover tcl sctips we can run:
+There are two pushover tcl scripts we can run:
 
 ```
 OpenSees pushover_concentrated.tcl
@@ -256,7 +256,7 @@ sample output:
 > ```
 
 
-NOTE: none of the parallel python exmples here: https://openseespydoc.readthedocs.io/en/latest/src/parallelexs.html
-work as expected, whether launched inside or outside of the continer.  OpenSeesSP and OpenSeesMP do work in
-parallel, across mulitple nodes if desired.  See the Slurm example scripts to run them.
+NOTE: none of the parallel python examples here: https://openseespydoc.readthedocs.io/en/latest/src/parallelexs.html
+work as expected, whether launched inside or outside of the container.  OpenSeesSP and OpenSeesMP do work in
+parallel, across multiple nodes if desired.  See the Slurm example scripts to run them.
 
