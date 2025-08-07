@@ -41,7 +41,7 @@ export APPTAINER_CACHEDIR=${SLURMTMPDIR}
 
 Build your container
 
-Building the OpenSees container taks about half an hour
+Building the OpenSees container takes about half an hour
 
 ```
 apptainer build OpenSees-$(arch).sif OpenSees.def
