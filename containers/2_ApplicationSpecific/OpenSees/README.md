@@ -2,6 +2,17 @@
 
 Please Note: Graphical output will only display in an [OnDemand portal](https://ondemand.ccr.buffalo.edu) session
 
+The ccrsoft/2024.04 software release was used for the build & run of the OpenSees container.
+
+To set ccrsoft/2024.04 at the default:
+
+```
+echo "module-version ccrsoft/2024.04 default" > $HOME/.modulerc
+```
+
+...then logout & log back in.
+
+
 ## Building the container
 
 A brief guide to building the OpenSees container follows:<br/>
