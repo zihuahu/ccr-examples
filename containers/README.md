@@ -2,7 +2,7 @@
 
 This directory contains example workflows for running containers on CCR's clusters. These examples are designed to supplement our official documentation on [containerization](https://docs.ccr.buffalo.edu/en/latest/howto/containerization/). Before using these workflows, it's important to understand the basics of containers and CCR-specific guidelines. Please refer to the full documentation for detailed instructions and best practices.
 
-At CCR, we use Singularity/Apptainer which allows you to execute software without requiring root privilages. CCR provides some commonly used container images, but you can also build your own (from sources like DockerHub, Podman, etc.) and run them with Apptainer. For in-depth information about Apptainer, you can refer to the official [Apptainer documentation](https://apptainer.org/documentation/). CCR provides a few pre-built containers available in: `/util/software/containers`.
+At CCR, we use Singularity/Apptainer which allows you to execute software without requiring root privilages. CCR provides some commonly used container images, but you can also build your own (from sources like DockerHub, Podman, etc.) and run them with Apptainer. CCR provides a few pre-built containers available in: `/util/software/containers`. For in-depth information about Apptainer, you can refer to the official [Apptainer documentation](https://apptainer.org/documentation/).
 
 ## Getting Started ([0_Introductory/](./0_Introductory/README.md))
 
