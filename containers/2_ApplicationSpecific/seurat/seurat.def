@@ -23,6 +23,7 @@ From: rocker/tidyverse:latest
 
     ## Install Bioconductor and Seurat dependencies in R
     Rscript -e "install.packages(c('remotes', 'Seurat', 'patchwork', 'ggplot2', 'cowplot'))"
+
     ## Optional: Install extra single-cell packages
     Rscript -e "BiocManager::install(c('SingleCellExperiment', 'scater', 'scran', 'biomaRt'))"
 

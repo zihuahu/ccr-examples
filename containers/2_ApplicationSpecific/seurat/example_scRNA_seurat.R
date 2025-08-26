@@ -5,12 +5,13 @@ library(dplyr)
 library(ggplot2)
 
 # --------- Define Input Files and Sample Labels ---------
-# create a data directory "data" and put donor matrix files in this data directory
-# change the name of samples 1-4 to your sample names and the numbers of samples
-data_path <- "./data/"
+# Sample input files for this example are located in `/util/software/data/seurat/`. 
+# To use your own files, replace these samples with your own, ensuring the file names and numbering follow your intended convention.
+data_path <- "/util/software/data/seurat"
+
 sample_files <- c(
   "sample1.csv", "sample2.csv",
-  "sample3.csv", "sample4.csv",
+  "sample3.csv", "sample4.csv"
 )
 sample_labels <- c("S1", "S2", "S3", "S4")
 
@@ -88,7 +89,7 @@ dev.off()
 # --------- Output Genes Expressed Per Cluster ---------
 cluster_ids <- levels(Idents(combined))
 
- Genes expressed in ≥10% of cells in each cluster
+#  Genes expressed in ≥10% of cells in each cluster
  threshold <- 0.10
  for (cluster in cluster_ids) {
  cells <- WhichCells(combined, idents = cluster)
@@ -110,8 +111,8 @@ deg_markers <- FindAllMarkers(
 )
 write.csv(deg_markers, "DEGs_by_cluster.csv", row.names = FALSE)
 
+
 # --------- Save Final Seurat Object ---------
 saveRDS(combined, file = "combined_seurat_final.rds")
 
 message("✅ Analysis complete.")
-
