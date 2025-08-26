@@ -2,6 +2,9 @@ A brief guide to building the seurat container for scRNA analysis follows:
 Please refer to CCR's container documentation for more detailed information on building and using Apptainer.
 
 1. Start an interactive job
+=======
+# An example Seurat Container with scRNA analysis
+# Building the container
 
 Apptainer is not available on the CCR login nodes and the compile nodes may not provide enough resources for you to build a container.
 We recommend requesting an interactive job on a compute node to conduct this build process.
