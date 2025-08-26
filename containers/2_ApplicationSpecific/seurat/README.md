@@ -1,5 +1,5 @@
 
-# Example Seurat Container with scRNA analysis
+# An example Seurat Container with scRNA analysis
 # Building the container
 
 # A brief guide to building the seurat container for scRNA analysis follows:
